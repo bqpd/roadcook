@@ -69,9 +69,16 @@ for (var i = 0; i < recipes.length; i++) {
 $('#toc').html(tochtml);
 
 var prevSelected;
-var toTop = function(){ 
+var toTop = function() { 
 				$("body").animate({scrollTop:0});
-			}
+			},
+	spacing = function() {
+		var vspacing = Math.max($('#toc').height()+126, $('#recipe').height()+120)+window.innerHeight;
+		$('#sidebar').height(vspacing);
+			};
+
+toTop();
+spacing();
 
 var loadRecipe = function(recipeID) {
 	if (typeof(prevSelected) !== "undefined")
@@ -81,7 +88,7 @@ var loadRecipe = function(recipeID) {
 	recipe = recipes[recipeID];
 	$('#recipename').text(recipe.name);
 	$('#recipedescr').text(recipe.descr);
-	$('#timensize').text(recipe.time + ', ' + recipe.size);
+	$('#timensize').text(recipe.time + recipe.size);
 
 	// Make recipe table
 	var tablehtml = '<table width="100%">\n<col width="2%"><col width="8%"><col width="8%"><col width="24%">\n';
@@ -107,6 +114,7 @@ var loadRecipe = function(recipeID) {
 	};
 	tablehtml += '</table>';
 	$('#recipe').html(tablehtml);
+	spacing();
 	window.setTimeout('toTop();',50);
 }
 
