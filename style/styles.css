@@ -190,6 +190,15 @@ a {
 	text-decoration: none;
 }
 
+#recipe a{
+	text-decoration: underline;
+}
+
+#recipe a:hover{
+	background-color: #ddd;
+	text-decoration: none;
+}
+
 :focus {
     outline: 0;
 }
