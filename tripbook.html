@@ -40,7 +40,7 @@
 		
 		<div id="recipebar"><a href="javascript:toTop();">
 			<div id="recipename">Ned and Nevin's Roadtrip Cookbook</div></a>
-			<div id="timensize">2 months</div></div>
+			<div id="timensize">June 8 - July 31</div></div>
 	</div>
 
 <script type="text/javascript" src="js/jquery-2.0.2.min.js"></script>
@@ -82,16 +82,26 @@ var loadRecipe = function(recipeID) {
 	$('#recipename').text(recipe.name);
 	$('#recipedescr').text(recipe.descr);
 	$('#timensize').text(recipe.time + ', ' + recipe.size);
-	
+
 	// Make recipe table
 	var tablehtml = '<table width="100%">\n<col width="2%"><col width="8%"><col width="8%"><col width="24%">\n';
+	var offset = 0;
 	for (var i = 0; i <= recipe.steps.length - 1; i++) {
 		for (var j = 0; j <= recipe.steps[i].ingredients.length - 1; j++) {
-			tablehtml += j ? '<tr><td></td>' : '<tr><td>'+(i+1)+'</td>';
-			tablehtml += '<td>'+recipe.steps[i].ingredients[j].qty+'</td>';
-			tablehtml += '<td>'+recipe.steps[i].ingredients[j].units+'</td>';
-			tablehtml += '<td>'+recipe.steps[i].ingredients[j].name+'</td>';
-			tablehtml += j ? '<td></td></tr>\n' : '<td rowspan="'+recipe.steps[i].ingredients.length+'">'+recipe.steps[i].instruction+'</td></tr>\n';
+			var ingredient = recipe.steps[i].ingredients[j];
+			if (ingredient.name !== 'f') {
+				tablehtml += j+offset ? '<tr><td></td>' : '<tr><td>'+(i+1)+'</td>';
+				tablehtml += '<td>'+ingredient.qty+'</td>';
+				tablehtml += '<td>'+ingredient.units+'</td>';
+				tablehtml += '<td>'+ingredient.name+'</td>';
+				tablehtml += j+offset ? '<td></td></tr>\n' : '<td rowspan="'+(offset+recipe.steps[i].ingredients.length)+'">'+recipe.steps[i].instruction+'</td></tr>\n';
+				if (offset<0) {offset++;}
+			}
+			else if (i !== 0) {
+				tablehtml += '<tr><td colspan="5">'+ingredient.qty+'</td>';
+				offset--;
+			}
+			else { offset--; }
 		};
 		tablehtml += '<tr><td style="padding: 9px"></tr>\n';
 	};

@@ -11,12 +11,14 @@ class Ingredient(object):
 			print '\t' + self.qty + ' ' + self.units + ' of ' + self.name
 		else:
 			print '/' + self.qty + '/'
-	def output(self):
+	def latex(self):
 		if self.name != 'f':
 			out = "\\ing["+self.qty+"]{"+self.units+"}{"+self.name+"}"
 		else: 
 			out = "\\freeform "+self.qty
 		return out
+	def js(self):
+		return 'name: "'+self.name+'", qty: "'+self.qty+'", units: "'+self.units+'"'
 
 class Step(object):
 	def __init__(self,number):
@@ -29,11 +31,18 @@ class Step(object):
 		for ingredient in self.ingredients:
 			ingredient.show()
 		print self.description
-	def output(self):
+	def latex(self):
 		out = ''
 		for ingredient in self.ingredients:
-			out += ingredient.output() + '\n'
+			out += ingredient.latex() + '\n'
 		out += self.description
+		return out
+	def js(self):
+		out = ' instruction: "'+self.description+'"'
+		out += ',\n ingredients: [\n'
+		for ingredient in self.ingredients:
+			out += ' {'+ingredient.js() +'},\n'
+		out += ']'
 		return out
 
 class Recipe(object):
@@ -48,11 +57,22 @@ class Recipe(object):
     	print "Takes " + self.time + ", makes " + self.size
     	for step in self.steps:
     		step.show()
-    def output(self):
+    def latex(self):
     	out = "\\begin{recipe}{"+self.title+"}{"+self.size+"}{"+self.time+"}\n"
     	for step in self.steps:
-    		out += step.output()+'\n'
+    		out += step.latex()+'\n'
     	out += "\\end{recipe}\n"
+    	return out
+    def js(self):
+    	out = '\n\n//------\n\nwindow.recipes.push(\n{\n'
+    	out += ' name: "'+self.title+'"'
+    	out += ',\n size: "'+self.size+'"'
+    	out += ',\n time: "'+self.time+'"'
+    	out += ',\n descr: "'+self.steps[0].ingredients[0].qty+'"'
+    	out += ',\n steps: [\n'
+    	for step in self.steps:
+    		out += '{\n'+step.js()+'\n},\n'
+    	out += ']});'
     	return out
 
 while True:
@@ -71,7 +91,7 @@ while True:
 		descr = False
 
 		while True:
-			if not descr:
+			if not descr and steps == 1:
 				name = "f"
 				descr = True
 			else:
@@ -106,8 +126,14 @@ while True:
 	if raw_input("Is the above correct? (type 'n' if not)\n") == 'n':
 		print "Starting over...\n\n\n"
 	else:
-		output = recipe.output()
-		print output
-		print("Saving...time for another recipe!")
-		with codecs.open(recipe.title, mode='w') as outfile:
-			outfile.write(output)
+		latex = recipe.latex()
+		print latex
+		print("Saving latex...")
+		with codecs.open('latex/recipes/'+recipe.title+'.tex', mode='w') as outfile:
+			outfile.write(latex)
+
+		js = recipe.js()
+		print js
+		print("Saving js...time for another recipe!")
+		with codecs.open('recipes/recipes.js', mode='a', encoding='utf-8') as outfile:
+			outfile.write(js)
