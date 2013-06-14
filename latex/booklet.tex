@@ -1,0 +1,103 @@
+\documentclass[letterpaper]{book}
+% typeblock size of 5.5 by 4 inches
+\setlength{\textheight}{419pt} \setlength{\textwidth}{289pt}
+\setlength{\oddsidemargin}{72pt} \setlength{\evensidemargin}{108pt}
+\setlength{\topmargin}{55.9pt} \setlength{\footskip}{27.5pt}
+\setlength{\headheight}{14.6pt} \setlength{\headsep}{19.9pt}
+
+
+\usepackage{xltxtra}
+\usepackage{lipsum} % for dummy text only
+
+\usepackage{xunicode}
+\setmainfont{ScalaSans Light}
+
+\newfontfamily\recfont{Scala}
+\newfontfamily\secfont{ScalaSans Cond}
+\newfontfamily\rectfont{ScalaSans Black}
+
+\usepackage{titlesec}
+\usepackage[nonumber,index]{cuisine}
+
+\newcommand{\secstyle}{\rectfont\huge\itshape}
+\titleformat{\chapter}%
+  {\secstyle} % format
+  {} % label
+  {0pt} % sep
+  {} % before
+  [] % after
+\titlespacing{\chapter}
+  {0pt} % left
+  {0pt} % before
+  {0pt} % after
+  [0pt] % right
+
+
+  \RecipeWidths{\textwidth}{0.5cm}{3cm}{1.75cm}{.75cm}{.75cm}
+\renewcommand*{\recipefont}{\recfont}
+\renewcommand*{\recipetitlefont}{\large\bfseries\rectfont}
+\renewcommand*{\recipequantityfont}{\secfont\bfseries}
+\renewcommand*{\recipeunitfont}{\secfont}
+\renewcommand*{\recipeingredientfont}{\secfont}
+\renewcommand*{\recipestepnumberfont}{\recfont\itshape}
+\renewcommand*{\recipefreeformfont}{\recfont\itshape}
+
+
+%\usepackage[noprint]{booklet}
+\usepackage[print,1to1]{booklet} \nofiles
+\pagespersignature{16} % 16 pages per signature
+\setpdftargetpages
+\ifprintoption % tweak dvi output only for final printing
+\special{!TeXDict begin /landplus90{true}store end}
+\special{!TeXDict begin <</Tumble true>> setpagedevice end}
+\fi
+\begin{document}
+\pagestyle{empty}
+% Want a blank sheet before the title page
+\hbox{}\cleardoublepage
+\pagestyle{plain}
+\pagenumbering{roman}
+\tableofcontents
+\cleardoublepage
+\pagenumbering{arabic}
+\pagestyle{headings}
+
+
+\chapter{Breakfast}
+
+\begin{recipe}{Zabaglione alla Marsala}{4 Portions}{\fr12 hour}
+\freeform This is a well-known Italian recipe which is
+great for piling on the calories.
+\ingredient[6]{}{egg yolks}
+\ingredient[2]{oz}{granulated sugar}
+\ingredient[6--8]{tbsp}{Marsala (or sherry)}
+\ingredient[\fr14]{oz}{gelatine}
+\ingredient[2]{tbsp}{cold water}
+In the top of a double boiler, combine the egg yolks with sugar and
+Marsala, and whip the mixture over hot, but not boiling, water until it
+thickens. Stir in gelatine, softened in cold water and dissolved over hot
+water.
+\ingredient[3]{tbsp}{brandy}
+\ingredient[\fr38]{pt}{double cream}
+Put the pan in a bowl of ice and stir the
+zabaglione well until it is thick and free of bubbles. When it is almost
+cold, fold in brandy and whipped cream and pour into individual moulds.
+\ingredient[3]{}{egg yolks}
+\ingredient[1]{oz}{granulated sugar}
+\ingredient[3--4]{tbsp}{Marsala (or sherry)}
+\ingredient[1\fr12]{tbsp}{brandy}
+To make the sauce, combine egg yolks and sugar in the top of a double
+saucepan. Whisk mixture over hot, but not boiling, water until the
+sauce coats the back of a spoon. Stir in the Marsala and brandy.
+\newstep
+Chill the zabaglione, unmould it, and serve with the sauce immediately.
+\end{recipe}\newpage
+
+\chapter{Bread}
+
+
+% want some blank endpapers to get enough pages into
+% the last signature for easy binding
+\clearpage
+\hbox{}\clearpage\hbox{}\cleardoublepage
+\end{document}

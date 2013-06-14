@@ -1,0 +1,79 @@
+@font-face {
+	font-family:	'Scala';
+	src:		url('Scala.otf');
+	font-weight: normal;
+	font-style: normal;
+	}
+
+@font-face {
+	font-family:	'Scala';
+	src:		url('Scala-Bold.otf');
+	font-weight: 700;
+	font-style: normal;
+	}
+
+@font-face {
+	font-family:	'Scala';
+	src:		url('Scala-Italic.otf');
+	font-weight: normal;
+	font-style: italic;
+	}
+
+@font-face {
+	font-family:	'Scala';
+	src:		url('Scala-BoldItalic.otf');
+	font-weight: 700;
+	font-style: italic;
+	}
+
+@font-face {
+	font-family:	'ScalaSans';
+	src:		url('ScalaSans.otf');
+	font-weight: normal;
+	font-style: normal;
+	}
+
+@font-face {
+	font-family:	'ScalaSans';
+	src:		url('ScalaSans-Bold.otf');
+	font-weight: 700;
+	font-style: normal;
+	}
+
+@font-face {
+	font-family:	'ScalaSans';
+	src:		url('ScalaSans-Italic.otf');
+	font-weight: normal;
+	font-style: italic;
+	}
+
+@font-face {
+	font-family:	'ScalaSans';
+	src:		url('ScalaSans-BoldItalic.otf');
+	font-weight: 700;
+	font-style: italic;
+	}
+
+
+
+@font-face {
+	font-family:	'ScalaSans Cond';
+	src:		url('ScalaSansCond.otf');
+	font-weight: normal;
+	font-style: normal;
+	}
+
+@font-face {
+	font-family:	'ScalaSans Cond';
+	src:		url('ScalaSansCond-Bold.otf');
+	font-weight: 700;
+	font-style: normal;
+	}
+
+
+@font-face {
+	font-family:	'ScalaSans Black';
+	src:		url('ScalaSansBlack.otf');
+	font-weight: normal;
+	font-style: normal;
+	}

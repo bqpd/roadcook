@@ -1,0 +1,32 @@
+\documentclass{book}
+\usepackage{xltxtra}
+\usepackage{lipsum} % for dummy text only
+\setmainfont[Mapping=tex-text]{Ubuntu}
+
+\usepackage{xunicode}
+\setmainfont{Minion Pro}
+
+\newfontfamily\secfont{Frutiger LT Std}
+
+\usepackage{titlesec}
+
+\newcommand{\secstyle}{\secfont\large\itshape}
+\titleformat{\chapter}%
+  {\secstyle} % format
+  {} % label
+  {10pt} % sep
+  {} % before
+  [\normalfont] % after
+
+\usepackage{booklet}
+
+\begin{document}
+\tableofcontents
+
+\chapter{Lorem Ipsum}
+
+\lipsum[1-3]
+\section{test}
+\lipsum[4-6]
+
+\end{document}
