@@ -120,4 +120,8 @@ var loadRecipe = function(recipeID) {
 	window.setTimeout('toTop();',50);
 }
 
+// are we somewhere in particular?
+  var hash = window.location.hash.substring(1);
+  if (hash) { loadRecipe(hash); }
+
 </script></body></html>
