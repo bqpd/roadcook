@@ -112,7 +112,7 @@ window.recipes.push(
 
 window.recipes.push(
 {
- name: "Zucchini Pancakes (aka Goop)",
+ name: "Zucchini Pancakes",
  size: "",
  time: "",
  descr: "Got any abnormally large zucchinis begging to be eaten?",
@@ -123,11 +123,11 @@ window.recipes.push(
  {name: "f", qty: "Got any abnormally large zucchinis begging to be eaten?", units: ""},
  {name: "farina (cream of wheat)", qty: "1/2", units: "cup"},
  {name: "water", qty: "", units: ""},
- {name: "zucchini (grated)", qty: "1", units: "cup-ish"},
- {name: "corn", qty: "1", units: "ear"},
- {name: "sweet onion", qty: "1/2", units: ""},
+ {name: "zucchini (grated)", qty: "1-2", units: "cups"},
+ {name: "corn (decobbed)", qty: "1", units: "ear"},
+ {name: "sweet onion (small dice)", qty: "1/2", units: ""},
  {name: "salt", qty: "1-2", units: "pinches"},
- {name: "red chilli flakes", qty: "1", units: "sprinkling"},
+ {name: "red chilli flakes", qty: "1/2", units: "tsp"},
  {name: "ground pepper", qty: "to taste", units: ""},
  {name: "eggs", qty: "3-4", units: ""},
 ]
