@@ -71,3 +71,39 @@ window.recipes.push(
 },
 ]});
 
+
+
+//------
+
+window.recipes.push(
+{
+ name: "Mookies",
+ size: "",
+ time: "35 min",
+ descr: "The cookie that can penetrate one's dreams.",
+ steps: [
+{
+ instruction: "Mix butter and sugar until well combined, add eggs and vanilla. Combine dry ingredients sans coconut, cranberries, etc. Mix the dry and wet together and then an add in the coconut, chocolate, cranberries and oats. Don't use an electric mixer for this step.",
+ ingredients: [
+ {name: "f", qty: "The cookie that can penetrate one's dreams.", units: ""},
+ {name: "butter", qty: "1", units: "cup"},
+ {name: "firmly packed brown sugar", qty: "1 1/2", units: "cups"},
+ {name: "eggs", qty: "2", units: ""},
+ {name: "vanilla", qty: "1", units: "tsp"},
+ {name: "rolled oats", qty: "3", units: "cups"},
+ {name: "flour", qty: "1", units: "cup"},
+ {name: "baking powder", qty: "1/2", units: "tsp"},
+ {name: "salt", qty: "1", units: "tsp"},
+ {name: "chopped walnuts (or leave out, I usually do)", qty: "1", units: "cup"},
+ {name: "shredded coconut", qty: "1/2", units: "cup"},
+ {name: "dried cranberries", qty: "1/2", units: "cup"},
+ {name: "chocolate chips", qty: "1/2", units: "cup"},
+]
+},
+{
+ instruction: "Use an ice-cream scoop to form the cookies and bake at 350F for about 20 minutes on a parchment paper lined cookie sheet.",
+ ingredients: [
+ {name: "", qty: "", units: ""},
+]
+},
+]});
