@@ -49,7 +49,7 @@ window.recipes.push(
  name: "Quinoa Salad",
  size: "",
  time: "30 min",
- descr: "Inspired by the resulting abundance of vegetables after a trip to the farmer's market.",
+ descr: "Inspired by an abundance of vegetables after one trip to the farmer's market.",
  steps: [
 {
  instruction: "Cook the quinoa. Sautee the zucchini and onion with a bit of garlic and salt, until cooked. Cooked the leafy greens to preferred texture. Chop up all the veggies to preferred size (medium to large dice). Add the garbanzo beans and mix it all together in a big bowl. Add salt, pepper and italian herbs (or other) to taste. Enjoy! Great leftovers for at least a few days.",
