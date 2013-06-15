@@ -107,3 +107,29 @@ window.recipes.push(
 ]
 },
 ]});
+
+//------
+
+window.recipes.push(
+{
+ name: "Zucchini Pancakes (aka Goop)",
+ size: "",
+ time: "",
+ descr: "Got any abnormally large zucchinis begging to be eaten?",
+ steps: [
+{
+ instruction: "Pour the farina in a bowl and add just enough water to be absorbed. Then add everything else to the bowl and stir it up. Fry like pancakes in a pan or scramble like eggs. It is equally delicious either way!",
+ ingredients: [
+ {name: "f", qty: "Got any abnormally large zucchinis begging to be eaten?", units: ""},
+ {name: "farina (cream of wheat)", qty: "1/2", units: "cup"},
+ {name: "water", qty: "", units: ""},
+ {name: "zucchini (grated)", qty: "1", units: "cup-ish"},
+ {name: "corn", qty: "1", units: "ear"},
+ {name: "sweet onion", qty: "1/2", units: ""},
+ {name: "salt", qty: "1-2", units: "pinches"},
+ {name: "red chilli flakes", qty: "1", units: "sprinkling"},
+ {name: "ground pepper", qty: "to taste", units: ""},
+ {name: "eggs", qty: "3-4", units: ""},
+]
+},
+]});
