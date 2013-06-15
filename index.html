@@ -1,1 +1,121 @@
-tripbook.html
+<html><head><meta charset="utf-8">
+	<title> Roadcook Tripbook </title>
+	<link rel="stylesheet" type="text/css" href="style/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="style/styles.css" />
+	<link rel="stylesheet" type="text/css" href="fonts/fonts.css" />
+	<link rel="icon" type="image/png" href="style/ampico.png">
+		<style>
+		</style>
+</head><body>
+	<div id="sidebar">
+
+		<div id="fixed">
+
+			<div id="nnn">
+				<a href="tripbook.html" title="head home">
+				<img src="style/nnn.png" height="36"/></a></div>
+
+			<div id="search">
+				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="30px" height="30px" viewBox="0 0 100 100" xml:space="preserve"><g>
+				<path d="M69.902,72.704L58.967,61.769c-2.997,1.961-6.579,3.111-10.444,3.111c-10.539,0-19.062-8.542-19.062-19.081      c0-10.519,8.522-19.061,19.062-19.061c10.521,0,19.06,8.542,19.06,19.061c0,3.679-1.036,7.107-2.828,10.011l11.013,11.011      c0.583,0.567,0.094,1.981-1.076,3.148l-1.64,1.644C71.882,72.78,70.468,73.269,69.902,72.704z M61.249,45.799      c0-7.033-5.695-12.727-12.727-12.727c-7.033,0-12.745,5.694-12.745,12.727c0,7.033,5.712,12.745,12.745,12.745      C55.554,58.544,61.249,52.833,61.249,45.799z"/></g></svg>
+				
+				<div id="searchbox"> 
+					<input type="text" value="What are you looking for?"></div>
+			</div>
+		</div>
+
+		<div id="toc"></div>
+	</div>
+
+	<div id="main">
+		<div id="recipe">
+		So here it is. Click recipes on the left to see what we've come up with so far. Everything there is also in <a href="latex/roadcook.pdf">this book</a>.
+		</div>
+		
+		<div id="botbrect"></div>
+		
+		<div id="recipedescr">We were in the cabin and we thought: "Why not make a cookbook?"</div>
+		
+		<div id="topbrect"></div>
+		
+		<div id="recipebar"><a href="javascript:toTop();">
+			<div id="recipename">Ned and Nevin's Roadtrip Cookbook</div></a>
+			<div id="timensize">June 8 - July 31</div></div>
+	</div>
+
+<script type="text/javascript" src="js/jquery-2.0.2.min.js"></script>
+<script type="text/javascript" src="recipes/recipes.js"></script>
+
+<script type="text/javascript">
+
+var recipes = window.recipes;
+
+//<div class="chapter">Bread</div>
+//also, freeform!
+
+var sortfunction = function(recipeA, recipeB) {
+	return recipeA.name.charCodeAt(0)-recipeB.name.charCodeAt(0);
+}
+
+recipes.sort(sortfunction);
+
+var tochtml = '';
+for (var i = 0; i < recipes.length; i++) {
+	var name = recipes[i].name;
+	var id = i;
+	var call = "loadRecipe("+id+");";
+	tochtml += '<a href=#'+id+' onclick="'+call+'"><div id="'+id+'" class="recipe">'+name+'</div></a>';
+};
+$('#toc').html(tochtml);
+
+var prevSelected;
+var toTop = function() { 
+				$("body").animate({scrollTop:0});
+			},
+	spacing = function() {
+		var vspacing = Math.max($('#toc').height()+126, $('#recipe').height()+120)+window.innerHeight;
+		$('#sidebar').height(vspacing);
+			};
+
+toTop();
+spacing();
+
+var loadRecipe = function(recipeID) {
+	if (typeof(prevSelected) !== "undefined")
+		{ $('#'+prevSelected).toggleClass("selRecipe"); }
+	prevSelected = recipeID;
+	$('#'+recipeID).toggleClass("selRecipe");
+	recipe = recipes[recipeID];
+	$('#recipename').text(recipe.name);
+	$('#recipedescr').text(recipe.descr);
+	$('#timensize').text(recipe.time + recipe.size);
+
+	// Make recipe table
+	var tablehtml = '<table width="100%">\n<col width="2%"><col width="8%"><col width="8%"><col width="24%">\n';
+	var offset = 0;
+	for (var i = 0; i <= recipe.steps.length - 1; i++) {
+		for (var j = 0; j <= recipe.steps[i].ingredients.length - 1; j++) {
+			var ingredient = recipe.steps[i].ingredients[j];
+			if (ingredient.name !== 'f') {
+				tablehtml += j+offset ? '<tr><td></td>' : '<tr><td>'+(i+1)+'</td>';
+				tablehtml += '<td>'+ingredient.qty+'</td>';
+				tablehtml += '<td>'+ingredient.units+'</td>';
+				tablehtml += '<td>'+ingredient.name+'</td>';
+				tablehtml += j+offset ? '<td></td></tr>\n' : '<td rowspan="'+(offset+recipe.steps[i].ingredients.length)+'">'+recipe.steps[i].instruction+'</td></tr>\n';
+				if (offset<0) {offset++;}
+			}
+			else if (i !== 0) {
+				tablehtml += '<tr><td colspan="5">'+ingredient.qty+'</td>';
+				offset--;
+			}
+			else { offset--; }
+		};
+		tablehtml += '<tr><td style="padding: 9px"></tr>\n';
+	};
+	tablehtml += '</table>';
+	$('#recipe').html(tablehtml);
+	spacing();
+	window.setTimeout('toTop();',50);
+}
+
+</script></body></html>
