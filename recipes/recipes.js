@@ -60,7 +60,7 @@ window.recipes.push(
  {name: "red pepper", qty: "1", units: ""},
  {name: "tomatoes", qty: "2-3", units: ""},
  {name: "corn (decobbed)", qty: "1", units: "ear"},
- {name: "leafy greens (kale, collard greens, spinach)", qty: "h`alf a bunch", units: ""},
+ {name: "leafy greens (kale, collard greens, spinach)", qty: "half a bunch", units: ""},
  {name: "carrots (grated)", qty: "3", units: ""},
  {name: "sweet onion", qty: "1", units: ""},
  {name: "red onion", qty: "1/4-1/2", units: ""},
