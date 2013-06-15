@@ -41,3 +41,32 @@ window.recipes.push(
 ]
 },
 ]});
+
+//------
+
+window.recipes.push(
+{
+ name: "Quinoa Salad",
+ size: "",
+ time: "30 min",
+ descr: "Inspired by the resulting abundance of vegetables after a trip to the farmer's market.",
+ steps: [
+{
+ instruction: "Cook the quinoa. Sautee the zucchini and onion with a bit of garlic and salt, until cooked. Cooked the leafy greens to preferred texture. Chop up all the veggies to preferred size (medium to large dice). Add the garbanzo beans and mix it all together in a big bowl. Add salt, pepper and italian herbs (or other) to taste. Enjoy! Great leftovers for at least a few days.",
+ ingredients: [
+ {name: "f", qty: "An original recipe inspired by the resulting abundance of vegetables after a trip to the farmer's market.", units: ""},
+ {name: "quinoa", qty: "1", units: "cup"},
+ {name: "zucchini", qty: "1", units: ""},
+ {name: "red pepper", qty: "1", units: ""},
+ {name: "tomatoes", qty: "2-3", units: ""},
+ {name: "corn (decobbed)", qty: "1", units: "ear"},
+ {name: "leafy greens (kale, collard greens, spinach)", qty: "h`alf a bunch", units: ""},
+ {name: "carrots (grated)", qty: "3", units: ""},
+ {name: "sweet onion", qty: "1", units: ""},
+ {name: "red onion", qty: "1/4-1/2", units: ""},
+ {name: "garbanzo beans", qty: "1", units: "can"},
+ {name: "garlic", qty: "2", units: "cloves"},
+ {name: "salt, pepper and italian herbs", qty: "to taste", units: ""},
+]
+},
+]});
