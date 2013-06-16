@@ -71,8 +71,6 @@ window.recipes.push(
 },
 ]});
 
-
-
 //------
 
 window.recipes.push(
@@ -156,6 +154,80 @@ window.recipes.push(
  {name: "stock (or water)", qty: "8", units: "cups"},
  {name: "salt and pepper", qty: "to taste", units: ""},
  {name: "bay leaf", qty: "(optional)", units: ""},
+]
+},
+]});
+
+//------
+
+window.recipes.push(
+{
+ name: "English Muffins",
+ size: "9 muffins",
+ time: "1.5 hours, ",
+ descr: 'Great to make on the weekend for breakfasts in the coming week.',
+ steps: [
+{
+ instruction: "Mix everything together, then add the oil and mix again. Turn the dough onto a clean floured surface, and knead until done (around 10m).",
+ ingredients: [
+ {name: "f", qty: 'Makes enough dough to fill two pie pans or one 10"x14" pan', units: ""},
+ {name: "white bread flour", qty: "2", units: "cups"},
+ {name: "whole wheat flour", qty: "2", units: "cups"},
+ {name: "yeast", qty: "1.5", units: "tsp"},
+ {name: "salt", qty: "2", units: "tsp"},
+ {name: "lukewarm water", qty: "2", units: "cups"},
+ {name: "olive oil", qty: "1", units: "tbsp"},
+]
+},
+{
+ instruction: "Shape the dough into a round, coat with a little oil, and let rise until doubled (around 30m). Press into the pan (as much as possible - it may be quite elastic) and let rise, covered, 30m.",
+ ingredients: [
+ {name: "olive oil", qty: "", units: ""},
+]
+},
+{
+ instruction: "Roll out the dough as flat as you can, and cut into 9 sections. Let rise for 15m, then flip them over and let them proof for another 15m. Heat and oil a pan (cast-iron preferred) and then put in as many muffins as will fit flat. Fry them for a minute or so on one side, then 5m on the other side, then back to the first side for as long as they need to cook all the way through. A well-cooked muffin will sound deep and hollow when knocked.",
+ ingredients: [
+ {name: "f", qty: 'The first two steps are the same as for foccaccia; why not make both together?', units: ""},
+  {name: "olive oil", qty: "", units: ""},
+  {name: "large salt", qty: "~2", units: "tsp"},
+  {name: "rosemary", qty: "~1", units: "tbsp"},
+]
+},
+]});
+
+//------
+
+window.recipes.push(
+{
+ name: "Pizza Dough",
+ size: '10" by 15" pan',
+ time: "1.5 hours, ",
+ descr: 'The whole wheat adds a bit of flavor, but you can replace it with white flour just fine.',
+ steps: [
+{
+ instruction: "Mix everything together, then add the oil and mix again. Turn the dough onto a clean floured surface, and knead until done (around 10m).",
+ ingredients: [
+ {name: "f", qty: 'Makes enough dough to fill two pie pans or one 10"x14" pan', units: ""},
+ {name: "white bread flour", qty: "2", units: "cups"},
+ {name: "whole wheat flour", qty: "2", units: "cups"},
+ {name: "yeast", qty: "1.5", units: "tsp"},
+ {name: "salt", qty: "2", units: "tsp"},
+ {name: "lukewarm water", qty: "2", units: "cups"},
+ {name: "olive oil", qty: "1", units: "tbsp"},
+]
+},
+{
+ instruction: "Shape the dough into a round, coat with a little oil, and let rise until doubled (around 30m). Press into the pan (as much as possible - it may be quite elastic) and let rise, covered, 30m.",
+ ingredients: [
+ {name: "olive oil", qty: "", units: ""},
+]
+},
+{
+ instruction: "Roll out the dough as flat as you can. You can spin it in the air a few times if you want, then transfer it to an oiled or cornmealed baking tray and start adding toppings.",
+ ingredients: [
+ {name: "f", qty: "Since they start the same, why not make english muffins, and focaccia too?", units: ""},
+  {name: "olive oil or<br> cornmeal", qty: "", units: ""},
 ]
 },
 ]});

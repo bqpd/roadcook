@@ -108,7 +108,7 @@ var loadRecipe = function(recipeID) {
 				if (offset<0) {offset++;}
 			}
 			else if (i !== 0) {
-				tablehtml += '<tr><td colspan="5">'+ingredient.qty+'</td>';
+				tablehtml += '<tr><td colspan="5" style="padding: 9px 0">'+ingredient.qty+'</td></tr>';
 				offset--;
 			}
 			else { offset--; }
