@@ -66,7 +66,7 @@ for (var i = 0; i < recipes.length; i++) {
 	var name = recipes[i].name;
 	var id = i;
 	var call = "loadRecipe("+id+");";
-	tochtml += '<a href=#'+id+' onclick="'+call+'"><div id="'+id+'" class="recipe">'+name+'</div></a>';
+	tochtml += '<a href=#'+id+' onclick="'+call+'"><div id="'+'toc'+id+'"class="recipe">'+name+'</div></a>';
 };
 $('#toc').html(tochtml);
 
@@ -84,9 +84,10 @@ spacing();
 
 var loadRecipe = function(recipeID) {
 	if (typeof(prevSelected) !== "undefined")
-		{ $('#'+prevSelected).toggleClass("selRecipe"); }
+		{ $('#toc'+prevSelected).toggleClass("selRecipe"); }
 	prevSelected = recipeID;
-	$('#'+recipeID).toggleClass("selRecipe");
+	$('#toc'+recipeID).toggleClass('selRecipe');
+
 	recipe = recipes[recipeID];
 	$('#recipename').text(recipe.name);
 	$('#recipedescr').text(recipe.descr);
@@ -117,7 +118,7 @@ var loadRecipe = function(recipeID) {
 	tablehtml += '</table>';
 	$('#recipe').html(tablehtml);
 	spacing();
-	window.setTimeout('toTop();',50);
+	toTop();
 }
 
 // are we somewhere in particular?

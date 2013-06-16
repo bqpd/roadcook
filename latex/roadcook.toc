@@ -1,3 +1,4 @@
-\contentsline {chapter}{\numberline {1}Breakfast}{1}
-\contentsline {subsection}{Zabaglione alla Marsala}{1}
-\contentsline {chapter}{\numberline {2}Bread}{9}
+\contentsline {subsection}{Focaccia}{1}
+\contentsline {subsection}{Zucchini Pancakes (aka Goop)}{2}
+\contentsline {subsection}{Mookies}{3}
+\contentsline {subsection}{Quinoa Salad}{4}
