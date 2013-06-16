@@ -133,3 +133,29 @@ window.recipes.push(
 ]
 },
 ]});
+
+//------
+
+window.recipes.push(
+{
+ name: "Red Lentil Soup",
+ size: "",
+ time: "",
+ descr: "Easy, freezes well and is super tasty.",
+ steps: [
+{
+ instruction: "Get the stock and lentils heating in a large pot while you sauté the onions and garlic. Add everything to the pot, bring it to a boil, and let it simmer for several hours or until tasty.",
+ ingredients: [
+ {name: "f", qty: "Easy and savory, freezes well. A Moms' production.", units: ""},
+ {name: "onions", qty: "2", units: ""},
+ {name: "garlic", qty: "2", units: "Tb"},
+ {name: "tumeric (powdered)", qty: "2", units: "tsp"},
+ {name: "cayenne", qty: "1/2", units: "tsp"},
+ {name: "canned crushed tomatoes (preferably fire-roasted and spicy)", qty: "2", units: "cups"},
+ {name: "red lentils", qty: "2", units: "cups"},
+ {name: "stock (or water)", qty: "8", units: "cups"},
+ {name: "salt and pepper", qty: "to taste", units: ""},
+ {name: "bay leaf", qty: "(optional)", units: ""},
+]
+},
+]});
