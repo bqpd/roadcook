@@ -226,7 +226,7 @@ window.recipes.push(
 {
  instruction: "Roll out the dough as flat as you can. You can spin it in the air a few times if you want, then transfer it to an oiled or cornmealed baking tray and start adding toppings.",
  ingredients: [
- {name: "f", qty: "Since they start the same, why not make english muffins, and focaccia too?", units: ""},
+ {name: "f", qty: "Since they start the same, why not make english muffins and focaccia too?", units: ""},
   {name: "olive oil or<br> cornmeal", qty: "", units: ""},
 ]
 },

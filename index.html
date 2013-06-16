@@ -62,10 +62,12 @@ var sortfunction = function(recipeA, recipeB) {
 recipes.sort(sortfunction);
 
 var tochtml = '';
+var tocindex = {};
 for (var i = 0; i < recipes.length; i++) {
 	var name = recipes[i].name;
-	var id = i;
-	var call = "loadRecipe("+id+");";
+	var id = name.toLowerCase().replace(' ','-').replace(' ','-').replace(' ','-');
+	tocindex[id] = i;
+	var call = "loadRecipe('"+id+"');";
 	tochtml += '<a href=#'+id+' onclick="'+call+'"><div id="'+'toc'+id+'"class="recipe">'+name+'</div></a>';
 };
 $('#toc').html(tochtml);
@@ -83,12 +85,13 @@ toTop();
 spacing();
 
 var loadRecipe = function(recipeID) {
+	console.log(recipeID);
 	if (typeof(prevSelected) !== "undefined")
 		{ $('#toc'+prevSelected).toggleClass("selRecipe"); }
 	prevSelected = recipeID;
 	$('#toc'+recipeID).toggleClass('selRecipe');
 
-	recipe = recipes[recipeID];
+	recipe = recipes[tocindex[recipeID]];
 	$('#recipename').text(recipe.name);
 	$('#recipedescr').text(recipe.descr);
 	$('#timensize').text(recipe.time + recipe.size);
