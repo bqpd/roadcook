@@ -203,7 +203,7 @@ window.recipes.push(
  name: "Pizza Dough",
  size: '10" by 15" pan',
  time: "1.5 hours, ",
- descr: 'The whole wheat adds a bit of flavor, but you can replace it with white flour just fine.',
+ descr: 'The whole wheat adds a bit of flavor, but you can replace it with white flour.',
  steps: [
 {
  instruction: "Mix everything together, then add the oil and mix again. Turn the dough onto a clean floured surface, and knead until done (around 10m).",
