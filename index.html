@@ -66,6 +66,7 @@ var sortfunction = function(recipeA, recipeB) {
 recipes.sort(sortfunction);
 
 var tocindex = {};
+var prevSelected;
 
 var setupTOC = function(visfunction) {
 	var tochtml = '';
@@ -79,11 +80,12 @@ var setupTOC = function(visfunction) {
 	}
 	};
 	$('#toc').html(tochtml);
+	prevSelected = location.href.split('#')[1];
+	$('#toc'+prevSelected).toggleClass('selRecipe');
 };
 
 setupTOC(function(recipe) {return true;});
 
-var prevSelected;
 var toTop = function() { 
 				$("body").animate({scrollTop:0});
 			},
@@ -139,7 +141,6 @@ var loadRecipe = function(recipeID) {
   if (hash) { loadRecipe(hash); }
 
  $("#filter").on("keyup", function(event) {
- 	console.log(event.keyCode)
     if (false == 1 + $.inArray(event.keyCode,[13,37,38,39,40])) {
                            // don't trigger for enter or arrow keys
         setupTOC(function(recipe) {
