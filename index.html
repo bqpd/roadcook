@@ -68,37 +68,43 @@ recipes.sort(sortfunction);
 var tocindex = {};
 var prevSelected;
 
-var setupTOC = function(visfunction) {
-	var tochtml = '';
-	for (var i = 0; i < recipes.length; i++) {
-		if (visfunction(recipes[i])) {
-			var name = recipes[i].name;
-			var id = name.toLowerCase().replace(' ','-').replace(' ','-').replace(' ','-');
-			tocindex[id] = i;
-			var call = "loadRecipe('"+id+"');";
-			tochtml += '<a href=#'+id+' onclick="'+call+'"><div id="'+'toc'+id+'"class="recipe">'+name+'</div></a>';
-	}
-	};
-	$('#toc').html(tochtml);
-	prevSelected = location.href.split('#')[1];
-	$('#toc'+prevSelected).toggleClass('selRecipe');
-};
-
-setupTOC(function(recipe) {return true;});
-
 var toTop = function() { 
 				$("body").animate({scrollTop:0});
 			},
 	spacing = function() {
 		var vspacing = Math.max($('#toc').height()+126, $('#recipe').height()+120)+window.innerHeight;
 		$('#sidebar').height(vspacing);
-			};
+	};
 
-toTop();
-spacing();
+var setupTOC = function(visfunction) {
+	var tochtml = '';
+	var entry = 0;
+	for (var i = 0; i < recipes.length; i++) {
+		if (visfunction(recipes[i])) {
+			var name = recipes[i].name;
+			var id = name.toLowerCase().replace(' ','-').replace(' ','-').replace(' ','-');
+			if (!entry) { entry = id; }
+			else { entry = 2; }
+			tocindex[id] = i;
+			var call = "loadRecipe('"+id+"');";
+			tochtml += '<a href=#'+id+' onclick="'+call+'"><div id="'+'toc'+id+'"class="recipe">'+name+'</div></a>';
+	}
+	};
+	$('#toc').html(tochtml);
+	prevSelected = location.hash.substring(1);
+	if (prevSelected) { $('#toc'+prevSelected).toggleClass('selRecipe'); }
+	if (entry && entry !== 2) { 
+		location.href = '#' + entry;
+		loadRecipe(entry);
+		 }
+	toTop();
+	spacing();
+};
+
+setupTOC(function(recipe) {return true;});
 
 var loadRecipe = function(recipeID) {
-	if (typeof(prevSelected) !== "undefined")
+	if (prevSelected)
 		{ $('#toc'+prevSelected).toggleClass("selRecipe"); }
 	prevSelected = recipeID;
 	$('#toc'+recipeID).toggleClass('selRecipe');
@@ -137,30 +143,29 @@ var loadRecipe = function(recipeID) {
 }
 
 // are we somewhere in particular?
-  var hash = window.location.hash.substring(1);
+  var hash = location.hash.substring(1);
   if (hash) { loadRecipe(hash); }
 
  $("#filter").on("keyup", function(event) {
     if (false == 1 + $.inArray(event.keyCode,[13,37,38,39,40])) {
                            // don't trigger for enter or arrow keys
         setupTOC(function(recipe) {
-        	var filter = $("#filter").val();
-        	if (recipe.name.search(filter)+1) { return true }
+        	var filter = $("#filter").val().toLowerCase();
+        	if (filter === deffilter) { return true }
+        	if (recipe.name.toLowerCase().search(filter)+1) { return true }
         	for (var i = 0; i < recipe.steps.length; i++) {
         		var step = recipe.steps[i];
-        		if (step.instruction.search(filter)+1) { return true }
+        		if (step.instruction.toLowerCase().search(filter)+1) { return true }
         		for (var j = 0; j < step.ingredients.length; j++) {
         			var ingredient = step.ingredients[j];
-        			if (ingredient.name.search(filter)+1) { return true }
-        			if (ingredient.qty.search(filter)+1) { return true }
-        			if (ingredient.units.search(filter)+1) { return true }
+        			if (ingredient.name.toLowerCase().search(filter)+1) { return true }
+        			if (ingredient.qty.toLowerCase().search(filter)+1) { return true }
+        			if (ingredient.units.toLowerCase().search(filter)+1) { return true }
         		};
         		recipe.steps[i]
         	};
         	return false;
         })
-    //  $('#tracks a').css("color","#777").css("font-weight","inherit").css("text-decoration","underline");
-      //refreshDeps();       // update values based on textbox contents
     }
   });
 

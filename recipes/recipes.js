@@ -85,7 +85,7 @@ window.recipes.push(
  ingredients: [
  {name: "f", qty: "The cookie that can penetrate one's dreams.", units: ""},
  {name: "butter", qty: "1", units: "cup"},
- {name: "firmly packed brown sugar", qty: "1 1/2", units: "cups"},
+ {name: "firmly packed brown sugar", qty: "1-1/2", units: "cups"},
  {name: "eggs", qty: "2", units: ""},
  {name: "vanilla", qty: "1", units: "tsp"},
  {name: "rolled oats", qty: "3", units: "cups"},
@@ -149,7 +149,7 @@ window.recipes.push(
  {name: "garlic", qty: "2", units: "Tb"},
  {name: "tumeric (powdered)", qty: "2", units: "tsp"},
  {name: "cayenne", qty: "1/2", units: "tsp"},
- {name: "canned crushed tomatoes (preferably fire-roasted and spicy)", qty: "2", units: "cups"},
+ {name: "canned crushed tomatoes (preferably fire-roasted, spicy)", qty: "2", units: "cups"},
  {name: "red lentils", qty: "2", units: "cups"},
  {name: "stock (or water)", qty: "8", units: "cups"},
  {name: "salt and pepper", qty: "to taste", units: ""},
@@ -188,7 +188,7 @@ window.recipes.push(
 {
  instruction: "Roll out the dough as flat as you can, and cut into 9 sections. Let rise for 15m, then flip them over and let them proof for another 15m. Heat and oil a pan (cast-iron preferred) and then put in as many muffins as will fit flat. Fry them for a minute or so on one side, then 5m on the other side, then back to the first side for as long as they need to cook all the way through. A well-cooked muffin will sound deep and hollow when knocked.",
  ingredients: [
- {name: "f", qty: 'The first two steps are the same as for foccaccia; why not make both together?', units: ""},
+ {name: "f", qty: "While you're at it, why not make some extra dough for bread?", units: ""},
   {name: "olive oil", qty: "", units: ""},
   {name: "large salt", qty: "~2", units: "tsp"},
   {name: "rosemary", qty: "~1", units: "tbsp"},
@@ -226,7 +226,7 @@ window.recipes.push(
 {
  instruction: "Roll out the dough as flat as you can. You can spin it in the air a few times if you want, then transfer it to an oiled or cornmealed baking tray and start adding toppings.",
  ingredients: [
- {name: "f", qty: "Since they start the same, why not make english muffins and focaccia too?", units: ""},
+ {name: "f", qty: "While you're at it, why not make some extra dough for bread?", units: ""},
   {name: "olive oil or<br> cornmeal", qty: "", units: ""},
 ]
 },
