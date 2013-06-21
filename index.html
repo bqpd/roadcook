@@ -151,7 +151,7 @@ var loadRecipe = function(recipeID) {
                            // don't trigger for enter or arrow keys
         setupTOC(function(recipe) {
         	var filter = $("#filter").val().toLowerCase();
-        	if (filter === deffilter) { return true }
+        	if (filter === deffilter.toLowerCase()) { return true }
         	if (recipe.name.toLowerCase().search(filter)+1) { return true }
         	for (var i = 0; i < recipe.steps.length; i++) {
         		var step = recipe.steps[i];
