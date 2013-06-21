@@ -54,7 +54,7 @@ class Recipe(object):
     def show(self):
     	print self.title
     	print "=========="
-    	print "Takes " + self.time + ", makes " + self.size
+    	print "Takes " + self.time + "makes " + self.size
     	for step in self.steps:
     		step.show()
     def latex(self):
@@ -78,6 +78,7 @@ class Recipe(object):
 while True:
 	recipe = Recipe(raw_input('Recipe title? \n'))
 	recipe.time = raw_input('Recipe time? \n')
+	if recipe.time:  recipe.time += ', '
 	recipe.size = raw_input('Recipe size? \n')
 
 	print "Alright! Now you're going to add ingredients and instructions."
