@@ -279,3 +279,62 @@ window.recipes.push(
 ]
 },
 ]});
+
+//------
+
+window.recipes.push(
+{
+ name: "Overnight Bread",
+ size: "1 loaf",
+ time: "",
+ descr: "The best excuse to have (most of) a beer.",
+ steps: [
+{
+ instruction: "Mix all the ingredients together and cover with seran wrap. Let rise for 8-24 hours. Punch down, knead three times and then shape into a ball and put it in an oven-proof pot or dutch oven that will allow for rising on parchment paper. Loosely cover with seran wrap and let rise (2 hours before baking). 30 minutes before baking, put the dutch oven or oven-proof pot in 500 F oven (remove the bread first) with lid. Put bread in the pot after 30 minutes with the lid on. Bake at 425F for 30 minutes and then take the lid off (and maybe turn the heat down a little bit). Cook for another 20 minutes or until done.",
+ ingredients: [
+ {name: "f", qty: "The best excuse to have (most of) a beer.", units: ""},
+ {name: "flour", qty: "3", units: "cups"},
+ {name: "yeast", qty: "1/4", units: "tsp"},
+ {name: "salt", qty: "1 1/2", units: "tsp"},
+ {name: "beer", qty: "3/8", units: "cup"},
+ {name: "water", qty: "7/8", units: "cup"},
+ {name: "white vinegar", qty: "2", units: "T"},
+ {name: "rosemary, garlic, walnuts, cheddar, jalepeno", qty: "", units: ""},
+]
+},
+]});
+
+//------
+
+window.recipes.push(
+{
+ name: "Challah",
+ size: "1 loaf",
+ time: "",
+ descr: "",
+ steps: [
+{
+ instruction: "Activate the yeast in warm water and let stand for about 5-10 minutes or until bubblty.",
+ ingredients: [
+ {name: "f", qty: "", units: ""},
+ {name: "yeast", qty: "2 1/4", units: "tsp"},
+ {name: "warm water", qty: "1", units: "cup"},
+]
+},
+{
+ instruction: "Add the flour, sugar and salt on top of the water layer to separate the dry and the wet ingredients.",
+ ingredients: [
+ {name: "flour", qty: "3 1/2", units: "cups"},
+ {name: "sugar", qty: "1/2 to 3/4", units: "cup"},
+ {name: "salt", qty: "1", units: "tsp"},
+]
+},
+{
+ instruction: "Melt the butter and add one egge to it. Whisk together and add on top of the dry ingredients. Blend all the ingredients together in a bowl and knead for about 10 minutes to form a stiff dough. Cover the dough and let rise for 2-4 hours, or until doubled in size. Punch the air out of the dough and cut into 3 or 6 pieces for braiding. Braid the challah and then place on a baking sheet with corn meal on the bottom and allow to rise (covered) for another 2-4 hours or until it has grown to desired size. Brush the second egg (whisked) on top of the bread and then cook at 350F for about 30 minutes, or until golden brown on top.",
+ ingredients: [
+ {name: "butter", qty: "2", units: "T"},
+ {name: "eggs", qty: "2", units: ""},
+ {name: "Melt the butter and add one egge to it. Whisk together and add on top of the dry ingredients. Blend all the ingredients together in a bowl and knead for about 10 minutes to form a stiff dough. Cover the dough and let rise for 2-4 hours, or until doubled in size. Punch the air out of the dough and cut into 3 or 6 pieces for braiding. Braid the challah and then place on a baking sheet with corn meal on the bottom and allow to rise (covered) for another 2-4 hours or until it has grown to desired size. Brush the second egg (whisked) on top of the bread and then cook at 350F for about 30 minutes, or until golden brown on top.", qty: "", units: ""},
+]
+},
+]});
