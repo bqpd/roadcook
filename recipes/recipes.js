@@ -231,3 +231,71 @@ window.recipes.push(
 ]
 },
 ]});
+
+//------
+
+window.recipes.push(
+{
+ name: "Enchiladas",
+ size: "30-40 enchiladas",
+ time: "An hour or so",
+ descr: "",
+ steps: [
+{
+ instruction: "Melt butter, sautee garlic, then gradually add the flour.",
+ ingredients: [
+ {name: "f", qty: "", units: ""},
+ {name: "butter", qty: "4", units: "T"},
+ {name: "garlic", qty: "2", units: "cloves"},
+ {name: "flour", qty: "4", units: "T"},
+]
+},
+]});
+
+//------
+
+window.recipes.push(
+{
+ name: "Enchiladas",
+ size: "30-40 enchiladas",
+ time: "1+ hrs",
+ descr: "",
+ steps: [
+{
+ instruction: "Melt the butter in a small frying pan and sautee the garlic. Then gradually add the flour.",
+ ingredients: [
+ {name: "f", qty: "", units: ""},
+ {name: "butter", qty: "4", units: "T"},
+ {name: "garlic", qty: "2", units: "cloves"},
+ {name: "flour", qty: "4", units: "T"},
+]
+},
+{
+ instruction: "Brown the flour and then add the chili powder. Slowly mix in the stock.",
+ ingredients: [
+ {name: "chili powder", qty: "4-6", units: "T"},
+ {name: "stock", qty: "4", units: "cups"},
+]
+},
+{
+ instruction: "Add the oregano and salt and let simmer for 10-20 minutes on low heat until it has  thickened. This is the sauce.",
+ ingredients: [
+ {name: "oregano", qty: "1", units: "tsp"},
+ {name: "salt", qty: "to taste", units: ""},
+]
+},
+{
+ instruction: "Shred the cheese into a big bowl and chop the scallions into a seperate bowl.",
+ ingredients: [
+ {name: "cheddar cheese", qty: "2-3", units: "lbs"},
+ {name: "scallions", qty: "2", units: "bunches"},
+]
+},
+{
+ instruction: "Now it is time to assemble it all! What you are going to do is heat oil in another small frying pan until it reacts to a sprinkling of water. The following process is most efficient with three people, but two works fine as well. One would be annoying. The process is as follows: dunk a corn tortilla in the hot oil, transfer to the sauce and do the same (using two spoons for this works really well, but have two spoons for each the oil and the sauce and don't mix them or else the oil will splatter everywhere!), then put the sauced tortilla in an oven-proof pan, top with a bit of cheese and scallions and then roll into an enchilada shape. Repeat until one of the vital ingredients has run out! It is nice to have a bit of sauce and cheese to sprinkle on top. Also, sauteed vegetables work really well cooked on top of the enchiladas if you want to pretend as though there is any healthy part of the meal. Bake the enchiladas for 10 minutes at 350 degrees F and then enjoy.",
+ ingredients: [
+ {name: "oil", qty: "", units: ""},
+ {name: "corn tortillas", qty: "30-40", units: ""},
+]
+},
+]});
