@@ -357,9 +357,37 @@ window.recipes.push(
  {name: "milk", qty: "1", units: "cup"},
  {name: "sugar", qty: "1/2", units: "cup"},
  {name: "egg yolks", qty: "2", units: ""},
- {name: "cayenne", qty: "1/2 t", units: "chili powder"},
- {name: "1/8 tsp", qty: "cinnamon", units: "3 1/2"},
- {name: "tsp", qty: "salt", units: "pinch"},
+ {name: "cayenne", qty: "1/2", units: "tsp"},
+ {name: "chili powder", qty: "⅛", units: "tsp"},
+ {name: "cinnamon", qty: "3 ½", units: "tsp"},
+ {name: "salt", qty: "1", units: "pinch"},
+]
+},
+]});
+
+//------
+
+window.recipes.push(
+{
+ name: "Corn Tortillas",
+ size: "",
+ time: "",
+ descr: "cornmeal",
+ steps: [
+{
+ instruction: "Combine ingredients in a bowl.",
+ ingredients: [
+ {name: "f", qty: "cornmeal", units: ""},
+ {name: "1", qty: "cup", units: "cup"},
+ {name: "flour", qty: "1", units: "cup"},
+ {name: "salt", qty: "1", units: "tsp"},
+]
+},
+{
+ instruction: "Add oil. Pour in boiling water and stir until dough-like. Let cool for a bit, then roll into tortillas (easiest between wax or parchment paper). Fry in a pan with a bit of oil.",
+ ingredients: [
+ {name: "oil", qty: "2", units: "T"},
+ {name: "boiling water", qty: "1", units: "cup"},
 ]
 },
 ]});
