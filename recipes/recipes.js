@@ -330,11 +330,36 @@ window.recipes.push(
 ]
 },
 {
- instruction: "Melt the butter and add one egge to it. Whisk together and add on top of the dry ingredients. Blend all the ingredients together in a bowl and knead for about 10 minutes to form a stiff dough. Cover the dough and let rise for 2-4 hours, or until doubled in size. Punch the air out of the dough and cut into 3 or 6 pieces for braiding. Braid the challah and then place on a baking sheet with corn meal on the bottom and allow to rise (covered) for another 2-4 hours or until it has grown to desired size. Brush the second egg (whisked) on top of the bread and then cook at 350F for about 30 minutes, or until golden brown on top.",
+ instruction: "Melt the butter and add one egg to it. Whisk together and add on top of the dry ingredients. Blend all the ingredients together in a bowl and knead for about 10 minutes to form a stiff dough. Cover the dough and let rise for 2-4 hours, or until doubled in size. Punch the air out of the dough and cut into 3 or 6 pieces for braiding. Braid the challah and then place on a baking sheet with corn meal on the bottom and allow to rise (covered) for another 2-4 hours or until it has grown to desired size. Brush the second egg (whisked) on top of the bread and then cook at 350F for about 30 minutes, or until golden brown on top.",
  ingredients: [
  {name: "butter", qty: "2", units: "T"},
  {name: "eggs", qty: "2", units: ""},
- {name: "Melt the butter and add one egge to it. Whisk together and add on top of the dry ingredients. Blend all the ingredients together in a bowl and knead for about 10 minutes to form a stiff dough. Cover the dough and let rise for 2-4 hours, or until doubled in size. Punch the air out of the dough and cut into 3 or 6 pieces for braiding. Braid the challah and then place on a baking sheet with corn meal on the bottom and allow to rise (covered) for another 2-4 hours or until it has grown to desired size. Brush the second egg (whisked) on top of the bread and then cook at 350F for about 30 minutes, or until golden brown on top.", qty: "", units: ""},
+ 
+]
+},
+]});
+
+//------
+
+window.recipes.push(
+{
+ name: "Mexican Chocolate Ice Cream",
+ size: "1 quart",
+ time: "2 hr, ",
+ descr: "",
+ steps: [
+{
+ instruction: "Heat slowly until combined and thickened to the point that it coats the back of a spoon. Then remove from heat, add 1/2 cup more cream and 1/2 cup more milk and chill before putting it in the ice cream maker.",
+ ingredients: [
+ {name: "f", qty: "", units: ""},
+ {name: "cocoa powder", qty: "3/4", units: "cup"},
+ {name: "cream", qty: "1", units: "cup"},
+ {name: "milk", qty: "1", units: "cup"},
+ {name: "sugar", qty: "1/2", units: "cup"},
+ {name: "egg yolks", qty: "2", units: ""},
+ {name: "cayenne", qty: "1/2 t", units: "chili powder"},
+ {name: "1/8 tsp", qty: "cinnamon", units: "3 1/2"},
+ {name: "tsp", qty: "salt", units: "pinch"},
 ]
 },
 ]});
