@@ -372,13 +372,12 @@ window.recipes.push(
  name: "Corn Tortillas",
  size: "",
  time: "",
- descr: "cornmeal",
+ descr: "",
  steps: [
 {
  instruction: "Combine ingredients in a bowl.",
  ingredients: [
- {name: "f", qty: "cornmeal", units: ""},
- {name: "1", qty: "cup", units: "cup"},
+ {name: "cornmeal", qty: "1", units: "cup"},
  {name: "flour", qty: "1", units: "cup"},
  {name: "salt", qty: "1", units: "tsp"},
 ]
@@ -388,6 +387,32 @@ window.recipes.push(
  ingredients: [
  {name: "oil", qty: "2", units: "T"},
  {name: "boiling water", qty: "1", units: "cup"},
+]
+},
+]});
+
+//------
+
+window.recipes.push(
+{
+ name: "Salsa",
+ size: "1 quart",
+ time: "30 min, ",
+ descr: "The salsa my friends still talk about.",
+ steps: [
+{
+ instruction: "Chop to preferred size and then gently mix in a bowl with the juice of a lime and salt/pepper to taste.",
+ ingredients: [
+ {name: "f", qty: "The salsa my friends still talk about.", units: ""},
+ {name: "tomatoes", qty: "5+", units: ""},
+ {name: "cilantro", qty: "1", units: "bunch"},
+ {name: "onion", qty: "1", units: ""},
+ {name: "jalapeno peppers (for medium spice)", qty: "2", units: ""},
+]
+},
+{
+ instruction: "",
+ ingredients: [
 ]
 },
 ]});
