@@ -403,9 +403,8 @@ window.recipes.push(
 {
  instruction: "Chop to preferred size and then gently mix in a bowl with the juice of a lime and salt/pepper to taste.",
  ingredients: [
- {name: "f", qty: "The salsa my friends still talk about.", units: ""},
  {name: "tomatoes", qty: "5+", units: ""},
- {name: "cilantro", qty: "1", units: "bunch"},
+ {name: "cilantro", qty: "1/2", units: "bunch"},
  {name: "onion", qty: "1", units: ""},
  {name: "jalapeno peppers (for medium spice)", qty: "2", units: ""},
 ]
@@ -413,6 +412,32 @@ window.recipes.push(
 {
  instruction: "",
  ingredients: [
+]
+},
+]});
+
+//------
+
+window.recipes.push(
+{
+ name: "Coconut Sticky Rice",
+ size: "",
+ time: "",
+ descr: "A college friend favourite since the first time I made it.",
+ steps: [
+{
+ instruction: "Soak in water for 3-24 hours. Then drain the water off and transfer to a pot. Add just a little bit of water (enough to make it not burn on the bottom, but little enough to make it sticky!). Cook on low until done, 20-30 minutes. 5-10 minutes before the rice is done, start making the sauce.",
+ ingredients: [
+ {name: "f", qty: "A college friend favourite since the first time I made it.", units: ""},
+ {name: "sweet rice", qty: "1", units: "cup"},
+]
+},
+{
+ instruction: "Slowly bring to a boil and then pour over the rice (once it has finished cooking). Top with fresh mango or whatever you please. (Add less salt and sugar if so desired.",
+ ingredients: [
+ {name: "coconut milk", qty: "1", units: "can"},
+ {name: "sugar", qty: "1/2", units: "cup"},
+ {name: "salt", qty: "2", units: "tsp"},
 ]
 },
 ]});
