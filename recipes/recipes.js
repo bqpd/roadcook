@@ -441,3 +441,46 @@ window.recipes.push(
 ]
 },
 ]});
+
+//------
+
+window.recipes.push(
+{
+ name: "Apple Cake",
+ size: "9x13 in pan",
+ time: "",
+ descr: "My favourite use of apples for dessert.",
+ steps: [
+{
+ instruction: "Core and cut the apples (slices or diced).",
+ ingredients: [
+ {name: "f", qty: "My favourite use of apples for dessert.", units: ""},
+ {name: "apples", qty: "4", units: ""},
+]
+},
+{
+ instruction: "Mix with a fork or whisk in a big bowl.",
+ ingredients: [
+ {name: "sugar", qty: "2", units: "cups"},
+ {name: "flour", qty: "2", units: "cups"},
+ {name: "baking soda", qty: "1 1/2", units: "tsp"},
+ {name: "baking powder", qty: "1 1/2 tsp", units: "tsp"},
+ {name: "cinnamon", qty: "1", units: "tsp"},
+ {name: "salt", qty: "3/4", units: "tsp"},
+ {name: "walnuts", qty: "1", units: "cup"},
+]
+},
+{
+ instruction: "Mix with a fork or whisk and add to dry mixture. Mix (using hands makes it easy).",
+ ingredients: [
+ {name: "eggs", qty: "2", units: ""},
+ {name: "oil", qty: "1/2", units: "cup"},
+ {name: "vanilla", qty: "1", units: "tsp"},
+]
+},
+{
+ instruction: "Add the apples and mix it all up. Cook for 50-60 minutes at 325 F until it seems done.",
+ ingredients: [
+]
+},
+]});
