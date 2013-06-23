@@ -464,7 +464,7 @@ window.recipes.push(
  {name: "sugar", qty: "2", units: "cups"},
  {name: "flour", qty: "2", units: "cups"},
  {name: "baking soda", qty: "1 1/2", units: "tsp"},
- {name: "baking powder", qty: "1 1/2 tsp", units: "tsp"},
+ {name: "baking powder", qty: "1 1/2", units: "tsp"},
  {name: "cinnamon", qty: "1", units: "tsp"},
  {name: "salt", qty: "3/4", units: "tsp"},
  {name: "walnuts", qty: "1", units: "cup"},
@@ -481,6 +481,7 @@ window.recipes.push(
 {
  instruction: "Add the apples and mix it all up. Cook for 50-60 minutes at 325 F until it seems done.",
  ingredients: [
+ {name: "", qty: "", units: ""},
 ]
 },
 ]});
